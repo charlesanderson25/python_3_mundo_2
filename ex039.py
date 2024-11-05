@@ -13,6 +13,7 @@ print('Quem nasceu em {} tem {} anos em {}'.format(anoNascimento, idade, ano_atu
 
 tempoFaltante = 0
 passouPrazo = idade - 18
+alistamento = anoNascimento + 18
 
 if idade < 18:
     tempoFaltante = 18 - idade
@@ -23,10 +24,12 @@ elif idade > 18:
 
 if anoNascimento > (ano_atual - 18):
     print('Ainda faltam {} anos para o alistamento'.format(tempoFaltante))
+    print('Seu alistamento será em {}'.format(alistamento))
 elif anoNascimento == (ano_atual - 18):
     print('Você possui {} anos! Está na idade exata para se alistar'.format(idade))
 else:
     print('Você já deveria ter se alistado há {} anos'.format(passouPrazo))
+
 
 
 # if idade < 18:
