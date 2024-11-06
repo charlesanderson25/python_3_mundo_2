@@ -15,6 +15,7 @@ cartao = valorProduto - (valorProduto * 0.05)
 cartao2x = valorProduto / 2
 
 cartao3x = ((valorProduto * 0.20) + valorProduto) / 3
+totalCartao3x = (valorProduto * 0.20) + valorProduto
 
 print('Para pagamento em dinheiro ou cheque o valor será de R$: {:.2f}'.format(dinheiroCheque))
 
@@ -25,5 +26,5 @@ if parcelas == 1:
 elif parcelas == 2:
     print('Para pagamento em 2x no cartão o valor será de 2x R$: {:.2f}'.format(cartao2x))
 elif parcelas >= 3:
-    print('Para pagamento em 3x no cartão o valor será de 3x R$: {:.2f}'.format(cartao3x))
+    print('Para pagamento em 3x no cartão o valor será de 3x R$: {:.2f} com total de R$ {}'.format(cartao3x, totalCartao3x))
 
