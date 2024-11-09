@@ -4,7 +4,13 @@ p1 = int(input('Informe o primeiro termo da Progressão Aritmética(PA):'))
 razao = int(input('Informe a razão da Progressão Aritmética(PA):'))
 
 print('O primeiro termo da razão é: {}'.format(p1))
+print('A razão é: {}'.format(razao))
 
-for c in range(1, 11):
-    p2 =
+for c in range(1, 10):
+    termo = p1 + c * razao
+    print(termo)
+print('ACABOU!')
+
+
+
 
