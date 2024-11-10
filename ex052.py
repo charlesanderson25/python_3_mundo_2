@@ -2,7 +2,19 @@
 
 n = int(input('Digite um número inteiro:'))
 
-if n / 1 == n and n / n == 1:
-    print('O número {} é um número primo!'.format(n))
+count = 0
+
+for c in range(1, n + 1): # O ' + 1 ' no final é porque no Python conta-se sempre -1 no range() do for. 
+    if n % c == 0:
+        print('\033[33m', end='')
+        count = count + 1
+    else:
+        print('\033[31m', end='')
+    print('{} '.format(c), end='')
+
+if count == 2:
+    print('O número {} foi divisível {} vezes.'.format(n, count))
+    print('\n\033[mO número {} é primo!'.format(n))
 else:
-    print('O número {} NÃO é primo!'.format(n))
+    print('O número {} foi divisível {} vezes.'.format(n, count))
+    print('\n\033[mO número {} não é primo!'.format(n))
