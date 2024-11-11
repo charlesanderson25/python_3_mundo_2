@@ -7,6 +7,7 @@ idade_homem_mais_velho = 0
 mulheres_menos_20_anos = 0
 
 for c in range(1, 5):
+    print('----- {}ª PESSOA -----'.format(c))
     nome = str(input('Informe seu nome:'))
     idade = float(input('Informe sua idade:'))
     sexo = str(input('Informe (M) para sexo masculino e (F) para sexo feminino:'))
