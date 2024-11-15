@@ -1,46 +1,47 @@
-# Laços de repetição - Parte 1
+# Estrutura de repetição While
 
-for c in range(1, 6):
-    print('Oi')
-print('FIM')
+# Conhecendo o limite, pode-se utilizar tanto o For quano o While 
 
-#-------------------------------------------------#
+# Usando o For
 
-for c in range(1, 6):
+for c in range(1, 5):
     print(c)
-print('FIM')
+print('FIM do For!')
 
-#-------------------------------------------------#
+# Usando o While
 
-for c in range(6, 0):
-        print(c)
-print('FIM')
-
-#-------------------------------------------------#
-
-for c in range(6, 0, -1):
-        print(c)
-print('Fim')
-
-#-------------------------------------------------#
-
-for c in range(0, 6, 2):
-        print(c)
-print('Fim')
-
-#-------------------------------------------------#
-
-n = int(input('Digite um número:'))
-for c in range(0, n + 1):
+c = 1
+while c < 5:
     print(c)
-print('FIM')
-    
-#-------------------------------------------------#
+    c = c + 1
+print('FIM do While!')
 
-i = int(input('Início:'))
-f = int(input('Fim:'))
-p = int(input('Passo:'))
+# Quando o limite é desconhecido, utiliza-se o While
 
-for c in range(i, f, p):
-      print(c)
-print('FIM!!!')
+n = 1
+while n != 0:
+    n= int(input('Informe um número inteiro:'))
+print('FIM do teste com While')
+
+##############################################################################
+
+teste = 'S'
+while teste == 'S':
+    numero = int(input('Digite um número inteiro:'))
+    teste = input('Deseja continuar? [S] ou [N]?:').upper()
+print('Fim do teste com while')
+
+##############################################################################
+
+n1 = 1
+par = 0
+impar = 0
+while n1 != 0:
+    n1 = int(input('Digite um valor:'))
+    if n1 != 0:
+        if n1 % 2 == 0:
+            par = par + 1
+        else:
+            impar = impar + 1
+print('Você digitou {} números pares e {} números ímpares.'.format(par, impar))
+
