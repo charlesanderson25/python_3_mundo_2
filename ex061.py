@@ -18,12 +18,14 @@
 p1 = int(input('Informe o primeiro termo da Progressão Aritmética(PA):'))
 razao = int(input('Informe a razão da Progressão Aritmética(PA):'))
 
+print('-=' * 12)
+
 print('O primeiro termo da razão é: {}'.format(p1))
 print('A razão é: {}'.format(razao))
 
 c = 1
 
-while c < 11:
+while c <= 10:
     termo = p1 + c * razao
     print(termo)
     c = c + 1
