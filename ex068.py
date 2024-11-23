@@ -2,34 +2,47 @@
 
 import random
 
+vitoria = 0
+
 print('-=' * 25)
 print('Vamos jogar PAR ou ÍMPAR')
 print('-=' * 25)
 
-jogador = int(input('Digite um valor:'))
+while True:
 
-escolha = str(input('PAR ou ÍMPAR?  [P/I]: ')).upper()
+    jogador = int(input('Digite um valor:'))
 
-computador = random.randint(1, 1000)
+    escolha = str(input('PAR ou ÍMPAR?  [P/I]: ')).strip().upper()[0]
 
-total = jogador + computador
+    while escolha not in ('P', 'I'):
+        escolha = input('Informe novamente uma opção [P] para PAR ou [I] para ímpar!').strip().upper()[0]
 
-if total % 2 == 0:
-    resultadoPar = 'DEU PAR'
-else:
-    resultadoImpar = 'DEU ÍMPAR'
+    computador = random.randint(1, 1000)
 
-# if escolha == resultadoPar:
-#     vitoriaDerrota = 'Você VENCEU!'
-# elif escolha == resultadoImpar:
-#     vitoriaDerrota = 'Você PERDEU!'
+    total = jogador + computador
 
-print(f'Você jogou {jogador} e o computador {computador}. Total de {total} {resultado}')
+    print(f'Você jogou {jogador} e o computador {computador}. Total de {total}')
 
-print('-=' * 25)
+    if total % 2 == 0:
+        print('DEU PAR!')
+    else:
+        print('DEU ÍMPAR!')
 
-print(vitoriaDerrota)
+    if escolha == 'P':
+        if total % 2 == 0:
+            print('Você VENCEU!')
+            vitoria =  vitoria + 1
+        else:
+            print('Você PERDEU!')
+            break
 
-print('-=' * 25)
-
-print('GAME OVER')
+    if escolha == 'I':
+        if total % 2 != 0:
+            print('Você VENCEU!')
+            vitoria = vitoria + 1
+        else:
+            print('Você PERDEU!')
+            break
+    print('Vamos jogar novamente...')
+print(f'Você venceu {vitoria} vezes!')
+print('GAME OVER!')
